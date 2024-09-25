@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/job_application_for_techlab"
+        android:textColor="@color/design_default_color_on_secondary"
+        android:gravity="center"
+        android:layout_marginBottom="8dp"
+        android:textSize="20sp" />
+
+    <!-- Switch for Light/Dark Mode -->
+    <Switch
+        android:id="@+id/switch_theme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="2dp"
+        android:text="Dark Mode"
+        android:layout_marginBottom="15dp"
+        tools:ignore="UseSwitchCompatOrMaterialXml" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Name"/>
+    <EditText
+        android:id="@+id/et_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint=" Enter your name"
+        android:drawableStart="@drawable/baseline_person_24"
+        android:inputType="text"
+        android:background="@android:drawable/editbox_background"
+         />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="E-mail/Phone"/>
+    <EditText
+        android:id="@+id/et_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint=" Enter e-mail or phone"
+        android:inputType="text"
+        android:drawableStart="@drawable/baseline_phone_iphone_24"
+        android:background="@android:drawable/editbox_background"
+         />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Preferences"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/black"/>
+    <CheckBox
+        android:id="@+id/SE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Software Engineer" />
+    <CheckBox
+        android:id="@+id/AD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="App Developer" />
+    <CheckBox
+        android:id="@+id/WD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Web Developer" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select Your Education" />
+
+    <RadioGroup
+        android:id="@+id/radio_group_degree"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/B.Sc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="B.Sc in CSE" />
+
+        <RadioButton
+            android:id="@+id/diploma"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Diploma in CSE" />
+
+        <RadioButton
+            android:id="@+id/self_education"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Self Thought" />
+    </RadioGroup>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Adjust Your CGPA"
+        android:layout_marginTop="10dp"
+        />
+
+    <SeekBar
+        android:id="@+id/seek_bar_cgpa"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="100" />
+
+    <TextView
+        android:id="@+id/tv_cgpa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="CGPA: " />
+    <!-- Button to Submit Preferences
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rate Our Company" />
+    <RatingBar
+        android:id="@+id/rating_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:numStars="5"
+        android:stepSize="1.0" />
+        -->
+    <!-- Button to Submit Preferences -->
+    <Button
+        android:id="@+id/btn_submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Submit" />
+
+</LinearLayout>
