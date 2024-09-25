@@ -1,24 +1,39 @@
 package com.example.assaignment2;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
+import android.widget.TextView;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 public class DisplayActivity extends AppCompatActivity {
+
+    private TextView tvName, tvEmail, tvPreferences, tvEducation, tvCgpa;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_display);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
+
+        // Initialize UI components
+        tvName = findViewById(R.id.tv_name);
+        tvEmail = findViewById(R.id.tv_email);
+        tvPreferences = findViewById(R.id.tv_preferences);
+        tvEducation = findViewById(R.id.education);
+        tvCgpa = findViewById(R.id.tv_cgpa);
+
+        // Get data from the Intent
+        String name = getIntent().getStringExtra("name");
+        String email = getIntent().getStringExtra("email");
+        String preferences = getIntent().getStringExtra("preferences");
+        String education = getIntent().getStringExtra("education");
+        String cgpa = getIntent().getStringExtra("cgpa");
+
+        // Set data in TextViews
+        tvName.setText("Name: " + name);
+        tvEmail.setText("Email/Phone: " + email);
+        tvPreferences.setText("Preferences: " + preferences);
+        tvEducation.setText("Education: " + education);
+        tvCgpa.setText("CGPA: " + cgpa);
     }
 }

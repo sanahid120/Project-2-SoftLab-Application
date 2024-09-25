@@ -9,30 +9,46 @@
         android:id="@+id/tv_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Name: " />
+        android:text="Name: "
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp"
+        />
 
     <TextView
         android:id="@+id/tv_email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp"
         android:text="Email/Phone: " />
 
     <TextView
         android:id="@+id/tv_preferences"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp"
         android:text="Preferences: " />
 
     <TextView
-        android:id="@+id/tv_education"
+        android:id="@+id/education"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textSize="18dp"
+        android:layout_marginBottom="8dp"
+        android:textStyle="bold"
         android:text="Education: " />
 
     <TextView
         android:id="@+id/tv_cgpa"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp"
         android:text="CGPA: " />
 
 </LinearLayout>

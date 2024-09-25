@@ -88,7 +88,7 @@
         android:orientation="horizontal">
 
         <RadioButton
-            android:id="@+id/B.Sc"
+            android:id="@+id/BSc"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="B.Sc in CSE" />
