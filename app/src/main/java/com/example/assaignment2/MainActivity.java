@@ -2,10 +2,13 @@ package com.example.assaignment2;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.annotation.SuppressLint;
+import android.app.Dialog;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.text.Editable;
 import android.text.TextUtils;
+import android.text.TextWatcher;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
@@ -73,6 +76,7 @@ public class MainActivity extends AppCompatActivity {
                 collectPreferences();
                 collectEducation();
 
+
                 Intent intent = new Intent(MainActivity.this, DisplayActivity.class);
                 intent.putExtra("name", name);
                 intent.putExtra("email", email);
@@ -80,6 +84,7 @@ public class MainActivity extends AppCompatActivity {
                 intent.putExtra("education", Education);
                 intent.putExtra("cgpa",Cg);
                 startActivity(intent);
+
 
             }
         });
@@ -94,6 +99,7 @@ public class MainActivity extends AppCompatActivity {
                 Education = radioButton.getText().toString();
             }
         });*/
+
         int selectedId = radioGroupDegree.getCheckedRadioButtonId();
 
             if (selectedId != -1) {
@@ -123,16 +129,33 @@ public class MainActivity extends AppCompatActivity {
 
         name = Name.getText().toString().trim();
         email = Email.getText().toString().trim();
+       /* Name.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });*/
 
         if (name.isEmpty()) {
             Name.setError("Name is required!");
-            Name.setHintTextColor(Color.RED); // Make hint text red
+           // Name.setHintTextColor(Color.RED); // Make hint text red
             isValid = false;
         }
         if (email.isEmpty()) {
 
             Email.setError("E-mail/Phone is required!");
-            Email.setHintTextColor(Color.RED); // Make hint text red
+          //  Email.setHintTextColor(Color.RED); // Make hint text red
+            Email.setHint(Color.RED);
             isValid = false;
         }
         if (!SE.isChecked() && !AD.isChecked() && !WD.isChecked()) {
@@ -161,5 +184,5 @@ public class MainActivity extends AppCompatActivity {
         btnSubmit = findViewById(R.id.btn_submit);
     }
 
-}
 
+}

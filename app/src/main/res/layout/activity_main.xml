@@ -13,6 +13,7 @@
         android:text="@string/job_application_for_techlab"
         android:textColor="@color/design_default_color_on_secondary"
         android:gravity="center"
+
         android:layout_marginBottom="8dp"
         android:textSize="20sp" />
 
@@ -22,13 +23,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:paddingTop="2dp"
+        android:textColor="@color/black"
         android:text="Dark Mode"
         android:layout_marginBottom="15dp"
         tools:ignore="UseSwitchCompatOrMaterialXml" />
     <TextView
+        android:id="@+id/tv_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
+        android:textColor="@color/black"
         android:text="Name"/>
     <EditText
         android:id="@+id/et_name"
@@ -37,12 +41,15 @@
         android:hint=" Enter your name"
         android:drawableStart="@drawable/baseline_person_24"
         android:inputType="text"
+        android:textColor="@color/black"
         android:background="@android:drawable/editbox_background"
          />
     <TextView
+        android:id="@+id/tv_phone_or_email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
+        android:textColor="@color/black"
         android:text="E-mail/Phone"/>
     <EditText
         android:id="@+id/et_email"
@@ -50,6 +57,7 @@
         android:layout_height="wrap_content"
         android:hint=" Enter e-mail or phone"
         android:inputType="text"
+        android:textColor="@color/black"
         android:drawableStart="@drawable/baseline_phone_iphone_24"
         android:background="@android:drawable/editbox_background"
          />
@@ -64,50 +72,59 @@
         android:id="@+id/SE"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textColor="@color/black"
         android:text="Software Engineer" />
     <CheckBox
         android:id="@+id/AD"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textColor="@color/black"
         android:text="App Developer" />
     <CheckBox
         android:id="@+id/WD"
         android:layout_width="wrap_content"
+        android:textColor="@color/black"
         android:layout_height="wrap_content"
         android:text="Web Developer" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textColor="@color/black"
         android:text="Select Your Education" />
 
     <RadioGroup
         android:id="@+id/radio_group_degree"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textColor="@color/black"
         android:orientation="horizontal">
 
         <RadioButton
             android:id="@+id/BSc"
             android:layout_width="wrap_content"
+            android:textColor="@color/black"
             android:layout_height="wrap_content"
-            android:text="B.Sc in CSE" />
+            android:text="B.Sc in CSE  " />
 
         <RadioButton
             android:id="@+id/diploma"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Diploma in CSE" />
+            android:textColor="@color/black"
+            android:text="Diploma     " />
 
         <RadioButton
             android:id="@+id/self_education"
-            android:layout_width="wrap_content"
+            android:layout_width="164dp"
             android:layout_height="wrap_content"
-            android:text="Self Thought" />
+            android:text="Self Thought"
+            android:textColor="@color/black" />
     </RadioGroup>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textColor="@color/black"
         android:text="Adjust Your CGPA"
         android:layout_marginTop="10dp"
         />
@@ -120,9 +137,11 @@
 
     <TextView
         android:id="@+id/tv_cgpa"
+        android:textColor="@color/black"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
+        android:textSize="14dp"
         android:text="CGPA: " />
     <!-- Button to Submit Preferences
     <TextView
@@ -142,6 +161,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
+        android:textColor="@color/white"
+        android:backgroundTint="#2BA618"
         android:text="Submit" />
 
 </LinearLayout>
